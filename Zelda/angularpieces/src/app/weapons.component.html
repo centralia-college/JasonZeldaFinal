@@ -1,0 +1,22 @@
+<h2>My weapons</h2>
+<div>
+  <label>weapon name:</label> <input #weaponName />
+  <button (click)="add(weaponName.value); weaponName.value=''">
+    Add
+  </button>
+</div>
+<ul class="weapons">
+  <li *ngFor="let weapon of weapons" (click)="onSelect(weapon)"
+      [class.selected]="weapon === selectedweapon">
+    <span class="badge">{{weapon.id}}</span>
+    <span>{{weapon.name}}</span>
+    <button class="delete"
+      (click)="delete(weapon); $event.stopPropagation()">x</button>
+  </li>
+</ul>
+<div *ngIf="selectedweapon">
+  <h2>
+    {{selectedweapon.name | uppercase}} is my weapon
+  </h2>
+  <button (click)="gotoDetail()">View Details</button>
+</div>

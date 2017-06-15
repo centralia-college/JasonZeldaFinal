@@ -1,0 +1,34 @@
+doctype html
+html(ng-app='zapp')
+  head
+   meta(name='viewport', content='width=device-width, initial-scale=1')
+  title=title
+  link(rel='stylesheet', href='/bootstrap/css/bootstrap.css')
+  link(rel='stylesheet', href='/stylesheets/style.css')
+
+  <script src="/node_modules/angular/angular.js"></script>
+  //<script>angular.module('zapp', []).controller('locationCtrl', function($scope, $http) {$scope.oneLocation = null;$scope.locationList = [];$http({method: 'GET',url: 'localhost:3000/api/locations'}).success(function (result) {$scope.locationList = result;});});</script>
+body.img(src='../images/background.png')        
+ .container-fluid
+   block content
+   footer
+      .row
+         .col-xs-12
+            small &copy; Evan Kenney, Camren Prater, Jason Costi 2017
+ script(src='/javascripts/jquery/dist/jquery.min.js')
+ script(src='/bootstrap/js/bootstrap.min.js')
+ script(src='/javascripts/touch.js')
+ <script src='/controllers/MainCtrl.js'></script>
+ <script src='/controllers/counterCtrl.js'></script>
+ <script src='/controllers/locationCtrl.js'></script>
+ <script src='/controllers/ItemCtrl.js'></script>
+ <script src='/controllers/EnemyCtrl.js'></script>
+ script(src='/javascripts/imageMapResizer.js')
+ //<script type='text/javascript'> $( document ).ready( function() { console.log('ready'); console.log(document.getElementById('area1').getAttribute('shape')); $('map').imageMapResize(); }); </script>
+ //<script type='text/javascript'> $('map').imageMapResize(); </script>
+ <script>$(document).ready(function() { console.log('ready'); $('map').imageMapResize();});</script>
+
+//-
+     background image taken and modified from:https://www.teepublic.com/phone-case/970051-the-legend-of-zelda-breath-of-the-wild-sheikah-sla
+     map image taken from from: https://www.polygon.com/zelda-breath-of-the-wild-guide-walkthrough/2017/6/1/15723316/shrine-map-location
+     main page image taken from http://aeleaene.tumblr.com/post/37210244896/gtofficial-the-legend-of-zelda-timeline-shrine

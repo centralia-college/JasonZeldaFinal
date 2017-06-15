@@ -1,0 +1,4 @@
+get the true size of the img and the current size
+then figure out the math for moving the coords based on that
+carry it out in the locationsCtrl after the info is gotten from the db but
+before the coords are sent to the dom

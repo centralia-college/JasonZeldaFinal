@@ -1,0 +1,27 @@
+extends layout
+
+block content
+        <script type='text/javascript'> $('map').imageMapResize();</script>
+        text Find and click on Kakariko,Goron City, Zoras Domain,Gerudo Town, or Rito Village to see details(full screen only)
+        a.btn.btn-info.pull-right(href='/counter') Counter System
+        img.map(src="/images/botwmap.png" usemap='#botwmap' width ='100%' border='0' alt='Breath of the Wild game map').hammer
+        <div><span ng-repeat='loc in locationList'>{{loc.name}}:{{loc.cords[0]}},{{loc.cords[1]}},{{loc.cords[2]}},{{loc.cords[3]}}</span></div>
+        map(name='botwmap')
+            // For later use one the problem with angular and the map resizer is figured out
+            //<area ng-repeat='loc in locationList' id='area1' shape='rect' coords='{{::loc.cords[0]}},{{::loc.cords[1]}},{{::loc.cords[2]}},{{::loc.cords[3]}}' href='/botwcity' alt='{{loc.name}} link' />
+
+            area(shape='rect' coords='1997,1444,2037,1484' href='/kakariko' alt='kakariko link')
+            area(shape='rect' coords='335,2013,375,2053' href='/gerudo' alt='Gerudo Town link')
+            area(shape='rect' coords='1961,430,2001,470' href='/goron' alt='Goron City link')
+            area(shape='rect' coords='399,630,439,670' href='/rito' alt='Rito Village link')
+            area(shape='rect' coords='2428,1035,2468,1075' href='/zora' alt='Zoras Domain link')
+
+
+//script(type='text/javascript')
+ $('map').imageMapResize();
+
+//
+//Hammer.JS - v2.0.8 - 2016-04-23
+//http://hammerjs.github.io/
+//Copyright (c) 2016 Jorik Tangelder
+//Licensed under the MIT license

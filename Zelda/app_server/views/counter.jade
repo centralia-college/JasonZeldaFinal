@@ -1,0 +1,25 @@
+extends layout
+
+block content
+  .col-xs-12.text-center(ng-controller='counterCtrl')
+    h1= 'Counter-System'
+    text Weapon:
+    span
+     select( ng-options='item as item.name for item in itemList track by item._id' ng-model='selected')
+    text Enemies:
+    span
+     select( ng-options='enemy as enemy.name for enemy in enemyList track by enemy._id' ng-model='selected')
+    &nbsp;
+    &nbsp;
+    a.btn.btn-info.pull-right(href='/botwmap') Back to Map
+    .row.list-group
+      .col-xs-12.list-group-item
+          .col-xs-12
+            <li ng-repeat='weakTo in selected.weakTo' class="list-unstyled">
+            <ul>{{weakTo}}</ul>
+            </li>
+            
+            <li ng-repeat='counter in selected.counters' class="list-unstyled">
+            <ul>{{counter}}</ul>
+            </li>
+
